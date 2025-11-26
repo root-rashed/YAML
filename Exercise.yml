@@ -1,0 +1,245 @@
+#Key–Value Pairs
+name: Rashedul
+country: Bangladesh
+age: 25
+
+
+#YAML uses spaces only, no tabs.
+user:
+  name: Rashed
+  age: 25
+
+
+#List of items
+languages:
+  - Python
+  - Java
+  - Go
+
+
+#List of objects
+users:
+  - name: Adam
+    age: 30
+  - name: Sara
+    age: 22
+
+
+#Objects (Nested Maps)
+server:
+  host: localhost
+  port: 8000
+  ssl:
+    enabled: true
+    certificate: "/etc/ssl/cert.pem"
+
+
+#Multiline strings
+#Literal ( | ) keeps formatting
+bio: |
+  I am a developer.
+  I love coding.
+
+
+#Folded ( > ) converts newlines to spaces
+description: >
+  This text
+  will become
+  a single line.
+
+
+is_active: true
+
+
+nickname: null
+
+
+# This is a comment
+nm: Rashed # inline comment
+
+
+#Default
+defaults: &defaultUser
+  role: user
+  active: true
+
+admin:
+  <<: *defaultUser
+  role: admin
+
+
+#Docker Compose example
+version: "3.9"
+
+services:
+  web:
+    image: nginx
+    ports:
+      - "8080:80"
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: secret
+
+
+#Kubernetes Deployment example
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: demo
+  template:
+    metadata:
+      labels:
+        app: demo
+    spec:
+      containers:
+        - name: app
+          image: nginx
+
+
+#GitHub Action example
+names: CI Pipeline
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install packages
+        run: npm install
+
+
+#Chai aur Code
+
+# Inline Comments
+chai_type: Masala_chai
+temperature: hot
+savings: 2
+browing_time: 5
+
+
+chai_recipe:
+   base: black_tea
+   milk: whole_milk
+
+chai_recipe_two:
+   base: black_tea
+   milk: whole_milk
+
+
+# Data Types
+
+chai_name: Masala_chai
+tagline: 'The best chai in town'
+
+brewing_instruction:
+  boil water
+  add tea leaves
+  add milk
+
+brewing_instruction_two:
+  boil water
+  add tea water
+  add milk
+
+# Numbers
+cups_per_day: 3
+cups_per_day_two: 0xFF22FF
+
+#Boolean
+is_hot: true
+add_sugar: true
+add_salt: no
+instant: no
+
+#Null
+sweetner: null
+alternatives: ~
+
+#Time stamp
+morning: 2025-11-26
+local: 2025-11-26 08:30:10
+
+spices:
+ - ginger
+ - cloves
+ - black_pepper
+ - true
+
+steeping_time: [3,2,1]
+
+#Nested lists
+chai_categories:
+
+ - name: Traditional
+   varities:
+    - Masala_chai
+    - Ginger_chai
+    - Cardmon_chai
+
+ - name: Modern
+   varities:
+    - Vanilla chai
+    - Chocolate chai
+
+#Makes it complex
+Masala_chai:
+  ingredients:
+    tea: black_tea
+    liquid:
+      water: 200ml
+      milk: 100ml
+    spices:
+      ginger: 1_inch
+      cinnamon: 1_stick
+  preparation:
+    tool: small pot
+    duration: 5_minutes
+
+
+#list of dictonaries
+Car:
+-  name: Honda
+   price: 100000
+   color: Yellow
+
+-  name: Lambo
+   price: 1000000
+   color: Yellow
+
+
+#default
+defaul_chai: &default_base
+  tea: black_tea
+  water: 200ml
+  blewing_time: 5
+
+morning_chai:
+  <<: *default_base
+  milk: 100ml
+
+evening_chai:
+  <<: *default_base
+  milk: 150ml
+
+night_chai:
+  <<: *default_base
+  milk: 200ml
+
+
+# Zip
+zip_code: !!str 12345
+count: !!int "123"
+
+unique_spices: !!set
+  ? cardamon
+  ? ginger
+  ? cloves
