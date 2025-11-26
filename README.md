@@ -1,4 +1,4 @@
-# 📘 YAML Basics – Complete Guide with Examples
+#📘 YAML Basics – Complete Guide with Examples
 
 This repository contains a comprehensive collection of **YAML examples**, ranging from basic key–value pairs to advanced features used in **Docker Compose**, **Kubernetes**, and **GitHub Actions**.
 It is designed for beginners and intermediate learners who want a clear, practical reference for YAML syntax.
@@ -30,7 +30,7 @@ Below are all the YAML examples included in this repository.
 ```yaml
 name: Rashedul
 country: Bangladesh
-age: 25
+age: 22
 ```
 
 ---
@@ -40,7 +40,7 @@ age: 25
 ```yaml
 user:
   name: Rashed
-  age: 25
+  age: 22
 ```
 
 ---
@@ -61,9 +61,9 @@ languages:
 ```yaml
 users:
   - name: Adam
-    age: 30
-  - name: Sara
     age: 22
+  - name: Sara
+    age: 19
 ```
 
 ---
