@@ -1,4 +1,4 @@
-#📘 YAML Basics – Complete Guide with Examples
+##📘 YAML Basics – Complete Guide with Examples
 
 This repository contains a comprehensive collection of **YAML examples**, ranging from basic key–value pairs to advanced features used in **Docker Compose**, **Kubernetes**, and **GitHub Actions**.
 It is designed for beginners and intermediate learners who want a clear, practical reference for YAML syntax.
