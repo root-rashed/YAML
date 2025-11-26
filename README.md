@@ -224,7 +224,7 @@ tagline: 'The best chai in town'
 
 ## 🔹 Incorrect (but useful learning example)
 
-(YAML requires lists under `-` but you wrote simple lines—kept for understanding.)
+(YAML requires lists under `-` but I wrote simple lines—kept for understanding.)
 
 ```yaml
 brewing_instruction:
